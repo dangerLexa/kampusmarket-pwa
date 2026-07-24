@@ -1,24 +1,23 @@
 const CACHE_NAME = 'kampusmarket-pwa-v1';
 
 const ASSETS = [
-  './',
-  './index.html',
-  './otz.html',
-  './registr.html',
-  './list.html',
-  './manifest.json',
-  './style.css',
-  './icon-192.png',
-  './icon-512.png',
-  './111.jfif',
-  './222.jpg',
-  './333.jpg',
-  './444.jpg',
-  './555.jpg',
-  './666.jpg',
-  './777.jfif',
-  './888.jpg',
-  './999.jfif'
+  'index.html',
+  'otz.html',
+  'registr.html',
+  'list.html',
+  'manifest.json',
+  'style.css',
+  'icon-192.png',
+  'icon-512.png',
+  '111.jfif',
+  '222.jpg',
+  '333.jpg',
+  '444.jpg',
+  '555.jpg',
+  '666.jpg',
+  '777.jfif',
+  '888.jpg',
+  '999.jfif'
 ];
 self.addEventListener('install', (event) => {
   event.waitUntil(
