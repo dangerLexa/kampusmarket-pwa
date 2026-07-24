@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Регистрация | KampusMarket</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="/manifest.json">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>KampusMarket</h1>
+            <nav>
+                <a href="index.html" class="active">Главная</a>
+                <a href="otz.html">Отзывы</a>
+                <a href="registr.html">Регистрация</a> 
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container vuz-grid">
+        <div class="banner">
+            <h2>Регистрация на KampusMarket</h2>
+            <p>Заполните форму, чтобы получить доступ к сведениям о вузах и возможности оставлять отзывы.</p>
+        </div>
+
+        <div class="reg-form-section">
+            <h3>Форма регистрации</h3>
+            <form class="reg-form" onsubmit="handleRegister(event)">
+                <div class="form-group">
+                    <input type="text" placeholder="Фамилия">
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Имя">
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Отчество">
+                </div>
+                <div class="form-group">
+                    <input type="tel"  placeholder="Номер телефона" pattern="[0-9+\-\s()]{7,20}">
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Электронная почта">
+                </div>
+                <div class="form-group">
+                    <a href="list.html" class="btn-submit">Зарегестрироваться</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>2026 KampusMarket</p>
+            <p>Почта: KampusMarket@yandex.ru</p>
+            <p>Телефон: +7 999 777 88 66</p>
+            <p>Москва, Улица Пушкина, Дом Калатушкина</p>
+        </div>
+    </footer>
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+            .then(reg => console.log('Service Worker зарегистрирован!', reg))
+            .catch(err => console.error('Ошибка регистрации SW:', err));
+        });
+    }
+    </script>
+</body>
+</html>

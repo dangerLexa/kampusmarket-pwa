@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Отзывы KampusMarket</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>KampusMarket</h1>
+            <nav>
+                <a href="index.html" class="active">Главная</a>
+                <a href="otz.html">Отзывы</a>
+                <a href="registr.html">Регистрация</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container vuz-grid">
+        <div class = "banner">
+            <h2>Что говорят студенты?</h2>
+            <p>Здесь вы можете оставить отзыв о вузе и посмотреть отзывы других людей</p>
+        </div>
+
+        <div class="review-form-section">
+            <h3>Оставить отзыв</h3>
+            <form class="review-form">
+                <input type="text" placeholder="Ваше имя">
+                <input type="text" placeholder="В какой вуз поступили">
+                <input type="text" placeholder="Ваш отзыв">
+                <button>Отправить отзыв</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>2026 KampusMarket</p>
+            <p>Почта: KampusMarket@yandex.ru</p>
+            <p>Телефон: +7 999 777 88 66</p>
+            <p>Москва, Улица Пушкина, Дом Калатушкина</p>
+        </div>
+    </footer>
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+            .then(reg => console.log('Service Worker зарегистрирован!', reg))
+            .catch(err => console.error('Ошибка регистрации SW:', err));
+        });
+    }
+    </script>
+</body>
+</html>

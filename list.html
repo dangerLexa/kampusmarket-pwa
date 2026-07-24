@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ссылки | KampusMarket</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="/manifest.json">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="icon-192.png" alt="Логотип">
+            <h1>KampusMarket</h1>
+            <nav>
+                <a href="index.html">Главная</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container vuz-grid">
+        <div class="banner">
+            <h2>Здесь расположены ссылки на официальные сайты вузов</h2>
+            <p>Там вы можете более подробно узнать о приёмах поступления</p>
+        </div>
+        <div class="vuz">
+            <a href = "https://msu.ru/">МГУ</a>
+            <a href = "https://bmstu.ru/">МГТУ имени Баумана</a>
+            <a href = "https://mephi.ru/">МИФИ</a>
+            <a href = "https://mipt.ru/">МФТИ</a>
+            <a href = "https://www.rsuh.ru/">РГГУ</a>
+            <a href = "https://gubkin.ru//">РГУ нефти и газа</a>
+            <a href = "https://www.hse.ru/">ВШЭ</a>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>2026 KampusMarket</p>
+            <p>Почта: KampusMarket@yandex.ru</p>
+            <p>Телефон: +7 999 777 88 66</p>
+            <p>Москва, Улица Пушкина, Дом Калатушкина</p>
+        </div>
+    </footer>
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+            .then(reg => console.log('Service Worker зарегистрирован!', reg))
+            .catch(err => console.error('Ошибка регистрации SW:', err));
+        });
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KampusMarket</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#000000">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="icon-192.png" alt="Логотип">
+            <h1>KampusMarket</h1>
+            <nav>
+                <a href="index.html" class="active">Главная</a>
+                <a href="otz.html">Отзывы</a>
+                <a href="registr.html">Регистрация</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container vuz-grid">
+        <div class="banner">
+            <h2>Поступление в лучшие Московские вузы</h2>
+            <p>Технические, Гуманитарные</p>
+        </div>
+        
+        <div class="vuz">
+            <img src="111.jfif" alt="МГУ Гуманитарный" class="vuz-img">
+            <h3>МГУ (Гуманитарный)</h3>
+            <p>Обществознание, История или Литература, Русский</p>
+            <p class="points">275 баллов + вступительные экзамены</p>
+            <a href="registr.html" class="btn-submit">Поступить</a>
+        </div>
+        
+        <div class="vuz">
+            <img src="222.jpg" alt="МГУ Технический" class="vuz-img">
+            <h3>МГУ (Технический)</h3>
+            <p>Физика или информатика, Профильная математика, Русский</p>
+            <p class="points">295 баллов + вступительные экзамены</p>
+            <a href="registr.html" class="btn-submit">Поступить</a>
+        </div>
+        
+        <div class="vuz">
+            <img src="555.jpg" alt="МФТИ" class="vuz-img">
+            <h3>МФТИ</h3>
+            <p>Физика или информатика, Профильная математика, Русский</p>
+            <p class="points">310 баллов</p>
+            <a href="registr.html" class="btn-submit">Поступить</a>
+        </div>
+        
+        <div class="vuz">
+            <img src="333.jpg" alt="ВШЭ Технический" class="vuz-img">
+            <h3>ВШЭ (Технический)</h3>
+            <p>Информатика, Профильная математика, Русский</p>
+            <p class="points">300 баллов + вступительные экзамены</p>
+            <a href="registr.html" class="btn-submit">Поступить</a>
+        </div>
+        
+        <div class="vuz">
+            <img src="444.jpg" alt="ВШЭ Гуманитарный" class="vuz-img">
+            <h3>ВШЭ (Гуманитарный)</h3>
+            <p>Обществознание, История или Литература, Русский</p>
+            <p class="points">285 баллов + вступительные экзамены</p>
+            <a href="registr.html" class="btn-submit">Поступить</a>
+        </div>
+        
+        <div class="vuz">
+            <img src="888.jpg" alt="МИФИ" class="vuz-img">
+            <h3>МИФИ</h3>
+            <p>Физика, Профильная математика, Русский</p>
+            <p class="points">290 баллов</p>
+            <a href="registr.html" class="btn-submit">Поступить</a>
+        </div>
+        
+        <div class="vuz">
+            <img src="777.jfif" alt="РГГУ" class="vuz-img">
+            <h3>РГГУ</h3>
+            <p>Обществознание, История или Литература, Русский</p>
+            <p class="points">260 баллов</p>
+            <a href="registr.html" class="btn-submit">Поступить</a>
+        </div>
+        
+        <div class="vuz">
+            <img src="999.jfif" alt="РГУ нефти и газа" class="vuz-img">
+            <h3>РГУ нефти и газа</h3>
+            <p>Физика или информатика, Профильная математика, Русский</p>
+            <p class="points">250 баллов</p>
+            <a href="registr.html" class="btn-submit">Поступить</a>
+        </div>
+        
+        <div class="vuz">
+            <img src="666.jpg" alt="МГТУ имени Баумана" class="vuz-img">
+            <h3>МГТУ имени Баумана</h3>
+            <p>Физика или информатика, Профильная математика, Русский</p>
+            <p class="points">295 баллов</p>
+            <a href="registr.html" class="btn-submit">Поступить</a>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>2026 KampusMarket</p>
+            <p>Почта: KampusMarket@yandex.ru</p>
+            <p>Телефон: +7 999 777 88 66</p>
+            <p>Москва, Улица Пушкина, Дом Калатушкина</p>
+        </div>
+    </footer>
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+            .then(reg => console.log('Service Worker зарегистрирован!', reg))
+            .catch(err => console.error('Ошибка регистрации SW:', err));
+        });
+    }
+    </script>
+</body>
+</html>
