@@ -19,10 +19,19 @@ const ASSETS = [
   '888.jpg',
   '999.jfif'
 ];
+// ПРАВИЛЬНЫЙ ВАРИАНТ
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS))
+    caches.open(CACHE_NAME)
+      .then((cache) => {
+        console.log('Кэшируем файлы:', ASSETS);
+        return cache.addAll(ASSETS);
+      })
+      .catch((err) => {
+        console.error('Ошибка кэширования:', err);
+      })
   );
+  self.skipWaiting(); // Чтобы воркер активировался сразу
 });
 self.addEventListener('activate', (event) => {
   event.waitUntil(
